@@ -17,7 +17,7 @@ class Color(Enum):
         RED = 'Reddish'
         BLUE = ugettext_lazy('bluë')
     
-    class Templates
+    class Templates:
         RED = "-red"
         BLUE = "-blue"
 
