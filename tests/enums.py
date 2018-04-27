@@ -16,6 +16,10 @@ class Color(Enum):
     class Labels:
         RED = 'Reddish'
         BLUE = ugettext_lazy('bluë')
+    
+    class Templates
+        RED = "-red"
+        BLUE = "-blue"
 
 
 class Taste(Enum):
@@ -37,6 +41,9 @@ class IntegerEnum(IntEnum):
 
     class Labels:
         A = 'foo'
+    
+    class Templates:
+        A = '-foo'
 
 
 class LabeledEnum(Enum):
