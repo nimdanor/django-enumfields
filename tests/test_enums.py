@@ -43,17 +43,8 @@ def test_lazy_labels():
 
 
 def test_custom_templates():
-    # Custom label
+    # Custom tempalte string
     assert Color.RED.template == '-red'
-    assert six.text_type(Color.RED) == '-red'
-    assert six.text_type(IntegerEnum.A) == '-foo'
-
-
-def test_automatic_templates():
-    # Automatic label
-    assert Color.GREEN.label == 'Green'
-    assert six.text_type(Color.GREEN) == 'Green'
-    assert six.text_type(IntegerEnum.B) == 'B'
 
 
 def test_formfield_labels():
