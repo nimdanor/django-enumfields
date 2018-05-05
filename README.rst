@@ -1,7 +1,7 @@
 This package lets you use real Python (PEP435_-style) enums with Django.
 
-.. image:: https://travis-ci.org/hzdg/django-enumfields.svg?branch=master
-    :target: https://travis-ci.org/hzdg/django-enumfields
+.. image:: https://travis-ci.org/qcoumes/django-enumfields.svg?branch=master
+    :target: https://travis-ci.org/qcoumes/django-enumfields
 
 
 Installation
