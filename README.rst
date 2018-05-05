@@ -1,5 +1,5 @@
 .. image:: https://travis-ci.org/qcoumes/django-enumfields.svg?branch=master
-    :target: https://travis-ci.org/qcoumes/django-enumfields &nbsp; 
+    :target: https://travis-ci.org/qcoumes/django-enumfields
 .. image:: https://coveralls.io/repos/github/qcoumes/django-enumfields/badge.svg?branch=master
     :target: https://coveralls.io/github/qcoumes/django-enumfields?branch=master
    
