@@ -32,6 +32,3 @@ install:
   - pip install coverage==4.0.3 pytest-cov python-coveralls
   
 script: tox
-
-after_success:
-- coveralls
