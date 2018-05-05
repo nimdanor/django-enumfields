@@ -29,7 +29,7 @@ matrix:
 install:
   - pip install -U pip wheel setuptools
   - pip install tox tox-travis
-  - pip install python-coveralls
+  - pip install pytest-cov python-coveralls
   
 script: tox
 
