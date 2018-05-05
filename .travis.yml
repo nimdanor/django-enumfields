@@ -35,5 +35,5 @@ script: tox
 
 after_success:
 - pip install -e .
-- py.test --cov=django-enumfields --cov-report=term-missing tests
+- py.test --cov=. --cov-report=term-missing tests
 - coveralls
