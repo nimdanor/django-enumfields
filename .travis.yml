@@ -1,5 +1,5 @@
 sudo: false
-language: python3
+language: python
 matrix:
   include:
     - python: '3.4'
