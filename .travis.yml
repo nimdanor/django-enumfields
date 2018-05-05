@@ -29,6 +29,6 @@ matrix:
 install:
   - pip install -U pip wheel setuptools
   - pip install tox tox-travis
-  - pip install coverage==4.0.3 pytest-cov python-coveralls
+  - pip install coverage==4.0.3 py pytest pytest-cov python-coveralls
   
 script: tox
