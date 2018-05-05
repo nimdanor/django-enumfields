@@ -15,7 +15,7 @@ class EnumField(ChoiceField):
         self.enum = enum
         self.lenient = lenient
         self.ints_as_names = ints_as_names
-        kwargs['choices'] = tuple((e.value, getattr(e, 'label', e.name)) for e in self.enum)
+        kwargs['choices'] = tuple((e.value, getattr(e, 'labels', e.name)) for e in self.enum)
         super(EnumField, self).__init__(**kwargs)
 
     def to_representation(self, instance):

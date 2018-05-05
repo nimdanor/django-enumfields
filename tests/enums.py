@@ -13,11 +13,11 @@ class Color(Enum):
     GREEN = 'g'
     BLUE = 'b'
 
-    class Labels:
+    class Label:
         RED = 'Reddish'
         BLUE = ugettext_lazy('bluë')
     
-    class Templates:
+    class Template:
         RED = "-red"
         BLUE = "-blue"
 
@@ -39,10 +39,10 @@ class IntegerEnum(IntEnum):
     A = 0
     B = 1
 
-    class Labels:
+    class Label:
         A = 'foo'
     
-    class Templates:
+    class Template:
         A = '-foo'
 
 
@@ -51,7 +51,7 @@ class LabeledEnum(Enum):
     BAR = 'bar'
     FOOBAR = 'foobar'
 
-    class Labels:
+    class Label:
         FOO = 'Foo'
         BAR = 'Bar'
         # this is intentional. see test_nonunique_label

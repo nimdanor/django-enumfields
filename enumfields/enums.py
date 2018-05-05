@@ -10,34 +10,34 @@ except ImportError:  # pragma: no cover
     raise ImportError('Missing the enum module. Please install enum34.')
 
 
-class EnumMeta(BaseEnumMeta):
-    def __new__(mcs, name, bases, attrs):
-        Labels = attrs.get('Labels')
-        Templates = attrs.get('Templates')
-        
-        if Labels is not None and inspect.isclass(Labels):
-            del attrs['Labels']
-            if hasattr(attrs, '_member_names'):
-                attrs._member_names.remove('Labels')
-        
-        if Templates is not None and inspect.isclass(Templates):
-            del attrs['Templates']
-            if hasattr(attrs, '_member_names'):
-                attrs._member_names.remove('Templates')
-        
-        obj = BaseEnumMeta.__new__(mcs, name, bases, attrs)
-        for m in obj:
-            try:
-                m.label = getattr(Labels, m.name)
-            except AttributeError:
-                m.label = m.name.replace('_', ' ').title()
-            
-            try:
-                m.template = getattr(Templates, m.name)
-            except AttributeError:
-                m.template = m.name.replace('_', ' ').title()
 
-        return obj
+class EnumMeta(BaseEnumMeta):
+    def __new__(cls, name, bases, attrs):
+        classes = {}
+        
+        for n, v in filter(lambda i:inspect.isclass(i[1]), attrs.items()):
+            ln = n.lower()
+            if ln in classes:
+                raise AttributeError('Member '+ln+' already exists.\
+                    Please check that no [class name].lower() conflicts.')
+            classes[ln] = (n, v)
+        
+        for n, _ in classes.values():
+            del attrs[n]
+            if hasattr(attrs, '_member_names'):
+                attrs._member_names.remove(n)
+        
+        enum = BaseEnumMeta.__new__(cls, name, bases, attrs)
+        for member in enum:
+            for ln, clas in [(ln, v[1]) for ln, v in classes.items()]:
+                try:
+                    setattr(member, ln, getattr(clas, member.name))
+                except AttributeError:
+                    pass
+            if not hasattr(member, "label"):
+                member.label = member.name.replace('_', ' ').title()
+                
+        return enum
 
 
 @python_2_unicode_compatible
@@ -55,15 +55,9 @@ class Enum(EnumMeta('Enum', (BaseEnum,), _EnumDict())):
         Show our label when Django uses the Enum for displaying in a view
         """
         return force_text(self.label)
-    
-    def template(self):
-        """
-        Return Templates string
-        """
-        return force_text(self.template)
 
 
 @python_2_unicode_compatible
 class IntEnum(int, Enum):
     def __str__(self):  # See Enum.__str__
-        return force_text(self.label)
+        return force_text(self.label )
