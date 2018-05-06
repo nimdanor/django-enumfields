@@ -32,8 +32,8 @@ setup(
     version='1.0.0',
     author='HZDG',
     author_email='webmaster@hzdg.com',
-    maintainer='qcoumes'
-    maintainer_email='coumes.quentin@gmail.com'
+    maintainer='qcoumes',
+    maintainer_email='coumes.quentin@gmail.com',
     description='Real Python Enums for Django.',
     license='MIT',
     url='https://github.com/qcoumes/django-enumfields',
