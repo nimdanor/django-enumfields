@@ -2,7 +2,8 @@
     :target: https://travis-ci.org/qcoumes/django-enumfields
 .. image:: https://coveralls.io/repos/github/qcoumes/django-enumfields/badge.svg?branch=master&service=github
     :target: https://coveralls.io/github/qcoumes/django-enumfields?branch=master
-   
+
+
 This package lets you use real Python (PEP435_-style) enums with Django.
 
 Installation
@@ -93,16 +94,10 @@ Besides the special Label class, for any other nested class declared inside the 
         RED = 'r'
         GREEN = 'g'
         BLUE = 'b'
-
-        class Label:
-            RED = 'A custom label'
         
         class AnyClass:
             GREEN = "My value"
 
-    assert Color.GREEN.label == 'Green'
-    assert Color.RED.label == 'A custom label'
-    
     assert Color.GREEN.anyclass == "My value"
     # Would raise Attribute error:
     Color.RED.anyclass
