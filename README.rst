@@ -8,7 +8,7 @@ This package lets you use real Python (PEP435_-style) enums with Django.
 Installation
 ------------
 
-1. ``pip install django-enumfields``
+``pip install -e git://github.com/qcoumes/django-enumfields#egg=django-enumfields``
 
 
 Included Tools
@@ -60,7 +60,7 @@ Normally, you just use normal PEP435_-style enums, however, django-enumfields
 also encludes its own version of Enum with a few extra bells and whistles.
 Namely, the smart definition of labels which are used, for example, in admin
 dropdowns. By default, it will create labels by title-casing your constant
-names. You can provide custom labels with a nested "Labels" class.
+names. You can provide custom labels with a nested "Label" class.
 
 .. code-block:: python
 
@@ -71,7 +71,7 @@ names. You can provide custom labels with a nested "Labels" class.
         GREEN = 'g'
         BLUE = 'b'
 
-        class Labels:
+        class Label:
             RED = 'A custom label'
 
     class MyModel(models.Model):
@@ -82,6 +82,30 @@ names. You can provide custom labels with a nested "Labels" class.
 
 
 .. _PEP435: http://www.python.org/dev/peps/pep-0435/
+
+Besides the Label class for any nested class declared inside the Enum, a corresponding attribute will be added to the class instance (no default will be provided).
+
+.. code-block:: python
+
+    from enumfields import EnumField, Enum  # Our own Enum class
+
+    class Color(Enum):
+        RED = 'r'
+        GREEN = 'g'
+        BLUE = 'b'
+
+        class Label:
+            RED = 'A custom label'
+        
+        class AnyClass:
+            GREEN = "My value"
+
+    assert Color.GREEN.label == 'Green'
+    assert Color.RED.label == 'A custom label'
+    
+    assert Color.GREEN.anyclass == "My value"
+    # Would raise Attribute error:
+    Color.RED.anyclass
 
 
 EnumFieldListFilter
