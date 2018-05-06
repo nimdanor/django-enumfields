@@ -32,7 +32,7 @@ setup(
     version='1.0.0',
     author='HZDG',
     author_email='webmaster@hzdg.com',
-    maintainer='qcoumes',
+    maintainer='Quentin Coumes',
     maintainer_email='coumes.quentin@gmail.com',
     description='Real Python Enums for Django.',
     license='MIT',
