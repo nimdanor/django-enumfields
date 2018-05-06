@@ -29,12 +29,14 @@ class PyTest(TestCommand):
 
 setup(
     name='django-enumfields',
-    version='0.10.0',
+    version='1.0.0',
     author='HZDG',
     author_email='webmaster@hzdg.com',
+    maintainer='qcoumes'
+    maintainer_email='coumes.quentin@gmail.com'
     description='Real Python Enums for Django.',
     license='MIT',
-    url='https://github.com/hzdg/django-enumfields',
+    url='https://github.com/qcoumes/django-enumfields',
     long_description=README,
     packages=find_packages(exclude=['tests*']),
     zip_safe=False,
