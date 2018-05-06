@@ -83,7 +83,7 @@ names. You can provide custom labels with a nested "Label" class.
 
 .. _PEP435: http://www.python.org/dev/peps/pep-0435/
 
-Besides the Label class for any nested class declared inside the Enum, a corresponding attribute will be added to the class instance (no default will be provided).
+Besides the special Label class, for any other nested class declared inside the Enum, a corresponding attribute will be added to the class instance without providing any default.
 
 .. code-block:: python
 
