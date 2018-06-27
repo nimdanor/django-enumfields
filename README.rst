@@ -14,7 +14,13 @@ This package lets you use real Python (PEP435_-style) enums with Django.
 Installation
 ------------
 
-``pip install -e git://github.com/qcoumes/django-enumfields#egg=django-enumfields``
+From source code:
+
+    python setup.py install
+
+From pip:
+
+    pip install -e git://github.com/qcoumes/django-enumfields#egg=django-enumfields
 
 
 Included Tools
