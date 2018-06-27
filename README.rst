@@ -4,6 +4,8 @@
     :target: https://coveralls.io/github/qcoumes/django-enumfields?branch=master
 .. image:: https://img.shields.io/badge/python-3.4%2C%203.5%2C%203.6-brightgreen.svg
     :target: #
+.. image:: https://img.shields.io/badge/django-1.8%2C%201.10%2C%201.11%2C%202.0+-brightgreen.svg
+    :target: #
 .. image:: https://img.shields.io/badge/license-MIT-brightgreen.svg
     :target: https://github.com/qcoumes/gitcmd/blob/master/LICENSE
 
