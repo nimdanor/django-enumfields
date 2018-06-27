@@ -119,3 +119,5 @@ EnumFieldListFilter
 
     class MyModelAdmin(admin.ModelAdmin):
       list_filter = [('color', EnumFieldListFilter)]
+
+*Originally forked from https://github.com/hzdg/django-enumfields (which, as July 2018, support python 2)*
