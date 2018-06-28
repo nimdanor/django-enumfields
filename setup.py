@@ -41,6 +41,7 @@ setup(
     packages=find_packages(exclude=['tests*']),
     zip_safe=False,
     classifiers=[
+        'Development Status :: 5 - Production/Stable'
         'Environment :: Web Environment',
         'Framework :: Django',
         'Framework :: Django :: 1.8',
