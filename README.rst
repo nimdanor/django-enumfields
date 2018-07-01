@@ -2,7 +2,7 @@
     :target: https://travis-ci.org/qcoumes/django-enumfields
 .. image:: https://coveralls.io/repos/github/qcoumes/django-enumfields/badge.svg?branch=master&service=github
     :target: https://coveralls.io/github/qcoumes/django-enumfields?branch=master
-.. image:: https://img.shields.io/badge/python-3.4%2C%203.5%2C%203.6-brightgreen.svg
+.. image:: https://img.shields.io/badge/python-3.4+-brightgreen.svg
     :target: #
 .. image:: https://img.shields.io/badge/django-1.8%2C%201.10%2C%201.11%2C%202.0+-brightgreen.svg
     :target: #
