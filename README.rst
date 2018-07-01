@@ -7,7 +7,7 @@
 .. image:: https://img.shields.io/badge/django-1.8%2C%201.10%2C%201.11%2C%202.0+-brightgreen.svg
     :target: #
 .. image:: https://img.shields.io/badge/license-MIT-brightgreen.svg
-    :target: https://github.com/qcoumes/gitcmd/blob/master/LICENSE
+    :target: https://github.com/qcoumes/django-enumfields/blob/master/LICENSE
 
 This package lets you use real Python (PEP435_-style) enums with Django.
 
