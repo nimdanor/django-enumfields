@@ -1,7 +1,7 @@
 .. image:: https://travis-ci.org/qcoumes/django-enumfields.svg?branch=master
     :target: https://travis-ci.org/qcoumes/django-enumfields
-.. image:: https://coveralls.io/repos/github/qcoumes/django-enumfields/badge.svg?branch=master&service=github
-    :target: https://coveralls.io/github/qcoumes/django-enumfields?branch=master
+.. image:: https://codecov.io/gh/qcoumes/django-enumfields/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/qcoumes/enumfields
 .. image:: https://img.shields.io/badge/python-3.4+-brightgreen.svg
     :target: #
 .. image:: https://img.shields.io/badge/django-1.8%2C%201.10%2C%201.11%2C%202.0+-brightgreen.svg
@@ -105,7 +105,7 @@ Besides the special Label class, for any other nested class declared inside the 
         RED = 'r'
         GREEN = 'g'
         BLUE = 'b'
-        
+
         class AnyClass:
             GREEN = "My value"
 

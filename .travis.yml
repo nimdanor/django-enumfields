@@ -1,6 +1,9 @@
 dist: xenial
+
 sudo: false
+
 language: python
+
 matrix:
   include:
     - python: '3.4'
@@ -45,8 +48,10 @@ matrix:
       env: TOXENV=py37-django21
 
 install:
-    - pip install -U wheel setuptools
-    - pip install tox-travis
-    - pip install coveralls
-  
+  - pip install -U wheel setuptools
+  - pip install tox-travis
+  - pip install codecov
+
 script: tox
+
+after_success: codecov
