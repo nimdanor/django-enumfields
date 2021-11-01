@@ -1,7 +1,6 @@
 import inspect
 
-from django.utils.encoding import force_text, python_2_unicode_compatible
-
+from django.utils.encoding import force_text
 try:
     from enum import Enum as BaseEnum
     from enum import EnumMeta as BaseEnumMeta
@@ -40,7 +39,7 @@ class EnumMeta(BaseEnumMeta):
         return enum
 
 
-@python_2_unicode_compatible
+
 class Enum(EnumMeta('Enum', (BaseEnum,), _EnumDict())):
     @classmethod
     def choices(self):
@@ -57,7 +56,7 @@ class Enum(EnumMeta('Enum', (BaseEnum,), _EnumDict())):
         return force_text(self.label)
 
 
-@python_2_unicode_compatible
+
 class IntEnum(int, Enum):
     def __str__(self):  # See Enum.__str__
         return force_text(self.label )
